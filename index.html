@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Soldadura: procesos, equipos y seguridad</title>
+<link rel="stylesheet" href="style.css">
+<style>
+section{display:none}
+section.active{display:block;animation:aparecer .3s ease}
+@keyframes aparecer{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+nav a.active{background:var(--accent);color:#fff}
+#intro p,#intro li{font-size:1.08rem} 
+#tipos p,#tipos td{font-size:1.08rem}
+#esquemas .two{grid-template-columns:1fr}
+#esquemas figure{max-width:680px;margin:0 auto}
+#esquemas .lead,#esquemas figcaption,#esquemas .alert{font-size:1.08rem}
+/* Clasificación */
+.clasif-grupo{margin:38px 0 0}
+.clasif-grupo>h3{font-size:1.3rem;color:var(--accent);margin:0 0 4px;letter-spacing:.03em;text-transform:uppercase}
+.clasif-item{display:grid;grid-template-columns:70px 1fr;gap:20px;padding:24px 0;border-bottom:1px solid var(--line);align-items:start}
+.clasif-item:last-child{border-bottom:none}
+.clasif-num{font-family:"Helvetica Neue",Arial,sans-serif;font-size:2.6rem;font-weight:700;color:var(--accent);line-height:1}
+.clasif-item h4{margin:0 0 8px;font-size:1.45rem;font-family:"Helvetica Neue",Arial,sans-serif}
+.clasif-item p{margin:0;font-size:1.2rem;line-height:1.7;color:var(--muted)}
+@media(max-width:640px){.clasif-item{grid-template-columns:48px 1fr;gap:14px}.clasif-num{font-size:1.9rem}.clasif-item h4{font-size:1.25rem}.clasif-item p{font-size:1.08rem}}
+/* Colores Ventajas y desventajas */
+.vent-ok>h3{color:#2f9e44}
+.vent-ok .clasif-num{color:#2f9e44}
+.vent-no>h3{color:#e03131}
+.vent-no .clasif-num{color:#e03131}
+/* Imágenes en clasificación */
+.clasif-item.con-img{grid-template-columns:70px 1fr 280px;align-items:center}
+.clasif-img{width:100%;height:190px;object-fit:cover;border-radius:12px;border:1px solid var(--line)}
+@media(max-width:900px){.clasif-item.con-img{grid-template-columns:70px 1fr}.clasif-img{grid-column:2;max-width:420px}}
+@media(max-width:640px){.clasif-item.con-img{grid-template-columns:48px 1fr}}
+.video-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px;margin-top:20px}
+.video-box h4{margin:0 0 10px;font-size:1.2rem;font-family:"Helvetica Neue",Arial,sans-serif}
+.video-box iframe{width:100%;aspect-ratio:16/9;border:0;border-radius:12px}
+/* Barra de navegación negra */
+nav{background:#000;border-bottom:1px solid #2a2a2a}
+nav a{color:#d6d3cc}
+nav a:hover{background:#2a2a2a;color:#fff}
+nav a.active{background:var(--accent);color:#fff}
+</style>
+</head>
+<body>
+<nav>
+<a href="#intro">Introducción</a><a href="#clasificacion">Clasificación</a><a href="#tipos">Tipos</a><a href="#esquemas">Esquemas</a><a href="#equipos">Instrumentos</a><a href="#ventajas">Ventajas y desventajas</a><a href="#seguridad">Seguridad</a><a href="#videos">Vídeos</a>
+</nav>
+<header>
+<h1>La <span>soldadura</span></h1>
+<p>Procesos, clasificación, equipos y normas de seguridad para unir materiales de forma permanente.</p>
+</header>
+<main>
+
+<section id="intro">
+<h2>¿Qué es la soldadura?</h2>
+<p class="lead">Proceso de unión permanente de dos o más piezas, normalmente metálicas, mediante calor, presión o ambos, con o sin material de aporte.</p>
+<p>Al calentar las piezas hasta fundir los bordes (o hasta un estado plástico), el material de ambas partes se mezcla y, al enfriarse, forma una unión continua. Una soldadura bien hecha debe igualar o superar la resistencia del metal base, por eso es uno de los métodos de unión más importantes de la industria.</p>
+
+<h3 style="margin:28px 0 12px">¿Cómo funciona?</h3>
+<p>Para soldar se necesita una fuente de energía que genere calor suficiente (un arco eléctrico, una llama, un láser, la resistencia eléctrica o la fricción). Ese calor funde una pequeña zona llamada <b>baño de fusión</b>. Al enfriarse y solidificarse, las piezas quedan unidas como si fueran una sola. En muchos procesos también se añade un metal de aporte y una protección (gas o fundente) para evitar que el aire contamine la unión.</p>
+
+<h3 style="margin:28px 0 12px">Elementos de una soldadura</h3>
+<div class="grid">
+<div class="card"><span class="tag">Elemento</span><h3>Metal base</h3><p>Las piezas que se quieren unir (acero, aluminio, acero inoxidable, cobre, etc.).</p></div>
+<div class="card"><span class="tag">Elemento</span><h3>Metal de aporte</h3><p>Material que se agrega para rellenar la unión: electrodo, alambre o varilla.</p></div>
+<div class="card"><span class="tag">Elemento</span><h3>Fuente de calor</h3><p>Arco eléctrico, llama, láser, resistencia eléctrica o fricción.</p></div>
+<div class="card"><span class="tag">Elemento</span><h3>Protección</h3><p>Gas (argón, CO₂) o fundente que aísla el baño fundido del oxígeno y la humedad del aire.</p></div>
+</div>
+
+<h3 style="margin:28px 0 12px">Un poco de historia</h3>
+<ul>
+<li>Desde la <b>Edad del Hierro</b> se unían metales calentándolos al rojo y golpeándolos (soldadura por forja).</li>
+<li>A finales del <b>siglo XIX</b> aparece la soldadura por arco eléctrico, que cambió la forma de fabricar estructuras.</li>
+<li>A comienzos del <b>siglo XX</b> se desarrollan la soldadura oxiacetilénica y los electrodos revestidos.</li>
+<li>Durante la <b>Segunda Guerra Mundial</b> se masificó, sobre todo en la construcción de barcos y aviones.</li>
+<li>Hoy se usan procesos automatizados, robots y tecnologías como el láser y la fricción-agitación.</li>
+</ul>
+
+<h3 style="margin:28px 0 12px">¿Dónde se usa?</h3>
+<p>Construcción de edificios y puentes, industria automotriz, astilleros y construcción naval, aeroespacial, petróleo y gas (oleoductos y tanques), maquinaria pesada, ferrocarriles, electrónica y reparación y mantenimiento en general.</p>
+
+<div class="alert"><b>Dato clave:</b> la soldadura no es solo "pegar metal": la calidad de la unión depende del proceso elegido, el material, la preparación de las piezas y la habilidad de quien suelda.</div>
+</section>
+
+<section id="clasificacion">
+<h2>Clasificación de la soldadura</h2>
+<p class="lead">Se puede clasificar según el principio de unión y según la fuente de energía que se utiliza.</p>
+
+<div class="clasif-grupo">
+<h3>Por el principio de unión</h3>
+<div class="clasif-item con-img"><div class="clasif-num">01</div><div><h4>Soldadura por fusión</h4><p>Se funde el metal base (y el de aporte) y, al enfriarse, forman una sola pieza. Incluye la soldadura por arco, oxigás, plasma, láser y haz de electrones.</p></div><img class="clasif-img" src="img/soldadura%20por%20fusion.jpg" alt="Soldadura por fusión" loading="lazy"></div>
+<div class="clasif-item con-img"><div class="clasif-num">02</div><div><h4>Soldadura por presión (estado sólido)</h4><p>La unión se logra aplicando presión, con poco o ningún calor externo y sin fundir el material. Incluye resistencia, fricción, ultrasonido y explosión.</p></div><img class="clasif-img" src="img/soldadura%20por%20presion.jpg" alt="Soldadura por presión" loading="lazy"></div>
+<div class="clasif-item con-img"><div class="clasif-num">03</div><div><h4>Soldadura fuerte y blanda</h4><p>Solo se funde el metal de aporte, que tiene menor temperatura de fusión que el metal base. Se llama <em>brazing</em> por encima de 450 °C y <em>soldering</em> por debajo.</p></div><img class="clasif-img" src="img/soldadura%20fuerte%20y%20blanda.jpg" alt="Soldadura fuerte y blanda" loading="lazy"></div>
+</div>
+
+<div class="clasif-grupo">
+<h3>Por la fuente de energía</h3>
+<div class="clasif-item con-img"><div class="clasif-num">01</div><div><h4>Arco eléctrico</h4><p>El calor lo produce un arco entre el electrodo y la pieza. Incluye SMAW, GMAW (MIG/MAG), GTAW (TIG), FCAW y SAW.</p></div><img class="clasif-img" src="img/soldadura%20de%20arco%20electrico.jpg" alt="Soldadura por arco eléctrico" loading="lazy"></div>
+<div class="clasif-item con-img"><div class="clasif-num">02</div><div><h4>Gas / química</h4><p>El calor viene de una llama o de una reacción química. Incluye la soldadura oxiacetilénica, la oxhídrica y la aluminotérmica.</p></div><img class="clasif-img" src="img/soldadura%20de%20gas.jpg" alt="Soldadura por gas" loading="lazy"></div>
+<div class="clasif-item con-img"><div class="clasif-num">03</div><div><h4>Resistencia, radiante y mecánica</h4><p>Usan la resistencia eléctrica, haces de energía o movimiento: puntos y costura, láser, haz de electrones, fricción-agitación y ultrasonido.</p></div><img class="clasif-img" src="img/soldadura%20por%20resistencia.jpg" alt="Soldadura por resistencia" loading="lazy"></div>
+</div>
+</div>
+</section>
+
+<section id="tipos">
+<h2>Tipos de soldadura</h2>
+<p class="lead">Resumen de los procesos más usados.</p>
+<div class="scroll"><table>
+<thead><tr><th>Proceso</th><th>Cómo funciona</th><th>Usos típicos</th></tr></thead>
+<tbody>
+<tr><td><b>SMAW</b> – Electrodo revestido</td><td>Arco entre electrodo revestido y pieza; el revestimiento genera gas y escoria protectores.</td><td>Construcción, mantenimiento, trabajo en campo.</td></tr>
+<tr><td><b>GMAW</b> – MIG/MAG</td><td>Alambre continuo como electrodo y aporte, con gas protector (inerte en MIG, activo en MAG).</td><td>Industria automotriz, carrocería, producción en serie.</td></tr>
+<tr><td><b>GTAW</b> – TIG</td><td>Electrodo de tungsteno no consumible, gas inerte (argón); aporte con varilla aparte.</td><td>Aluminio, acero inoxidable, tuberías, trabajos de precisión.</td></tr>
+<tr><td><b>FCAW</b> – Alambre tubular</td><td>Alambre hueco con fundente interno; con o sin gas externo.</td><td>Estructuras gruesas, astilleros, exteriores.</td></tr>
+<tr><td><b>SAW</b> – Arco sumergido</td><td>Arco oculto bajo una capa de fundente granular.</td><td>Tanques, vigas, recipientes a presión.</td></tr>
+<tr><td><b>Oxiacetilénica</b> (OFW)</td><td>Llama de acetileno y oxígeno que funde el metal; se añade varilla de aporte.</td><td>Reparaciones, láminas delgadas, corte y soldadura fuerte.</td></tr>
+<tr><td><b>Por resistencia</b> (puntos/costura)</td><td>Corriente alta y presión entre electrodos de cobre; el calor sale por la resistencia eléctrica.</td><td>Carrocerías, electrodomésticos, láminas.</td></tr>
+<tr><td><b>Plasma</b> (PAW)</td><td>Arco constreñido que produce un chorro de plasma muy concentrado.</td><td>Aeroespacial, alta precisión, corte.</td></tr>
+<tr><td><b>Láser</b> (LBW)</td><td>Haz láser enfocado que funde con mínima zona afectada.</td><td>Electrónica, automotriz, piezas finas.</td></tr>
+<tr><td><b>Haz de electrones</b> (EBW)</td><td>Electrones acelerados en vacío; penetración profunda.</td><td>Aeroespacial, nuclear.</td></tr>
+<tr><td><b>Fricción-agitación</b> (FSW)</td><td>Herramienta giratoria que plastifica el material sin fundirlo.</td><td>Aluminio en aviones, trenes y barcos.</td></tr>
+<tr><td><b>Ultrasónica</b></td><td>Vibraciones de alta frecuencia bajo presión.</td><td>Electrónica, plásticos, láminas finas.</td></tr>
+<tr><td><b>Fuerte y blanda</b></td><td>Metal de aporte fundido que moja las piezas por capilaridad.</td><td>Tuberías de cobre, joyería, circuitos electrónicos.</td></tr>
+<tr><td><b>Aluminotérmica</b></td><td>Reacción química de aluminio y óxido de hierro que genera metal fundido.</td><td>Unión de rieles de ferrocarril.</td></tr>
+</tbody></table></div>
+</section>
+
+<section id="esquemas">
+<h2>Esquemas</h2>
+<p class="lead">Diagramas simplificados de dos procesos de arco.</p>
+<div class="two">
+<figure>
+<svg viewBox="0 0 320 210" role="img" aria-label="Esquema de soldadura SMAW">
+<rect x="20" y="150" width="280" height="40" fill="#868e96"/>
+<path d="M130 150 Q160 125 190 150Z" fill="#ff922b"/>
+<path d="M235 25 L172 128" stroke="#868e96" stroke-width="7" stroke-linecap="round"/>
+<path d="M235 25 L200 83" stroke="#e8590c" stroke-width="7" stroke-linecap="round"/>
+<circle cx="168" cy="136" r="6" fill="#ffd43b"/>
+<path d="M120 160 L150 140 M210 160 L185 140" stroke="#ffd43b" stroke-width="2"/>
+<rect x="30" y="140" width="100" height="10" fill="#495057" opacity=".6"/>
+<g fill="currentColor" font-size="11" font-family="Arial"><text x="245" y="35">Electrodo</text><text x="244" y="48">revestido</text><text x="205" y="125">Arco</text><text x="30" y="135">Escoria</text><text x="130" y="205">Metal base</text><text x="215" y="145">Baño fundido</text></g>
+</svg>
+<figcaption><b>SMAW:</b> el arco funde el electrodo y el metal base; el revestimiento forma gas y escoria protectores.</figcaption>
+</figure>
+<figure>
+<svg viewBox="0 0 320 210" role="img" aria-label="Esquema de soldadura TIG">
+<rect x="20" y="150" width="280" height="40" fill="#868e96"/>
+<path d="M120 150 Q160 120 200 150Z" fill="#ff922b"/>
+<rect x="130" y="30" width="60" height="70" rx="8" fill="#495057"/>
+<rect x="156" y="100" width="8" height="38" fill="#adb5bd"/>
+<ellipse cx="160" cy="142" rx="52" ry="22" fill="#74c0fc" opacity=".3"/>
+<path d="M280 70 L185 138" stroke="#e8590c" stroke-width="4" stroke-linecap="round"/>
+<g fill="currentColor" font-size="11" font-family="Arial"><text x="132" y="22">Antorcha TIG</text><text x="5" y="125">Gas inerte (argón)</text><text x="172" y="115">Tungsteno</text><text x="215" y="63">Varilla de aporte</text><text x="115" y="205">Metal base</text></g>
+</svg>
+<figcaption><b>GTAW (TIG):</b> electrodo de tungsteno no consumible, argón como protección y varilla de aporte aparte.</figcaption>
+</figure>
+</div>
+<div class="alert"><b>Tipos de uniones:</b> a tope, en T, en esquina, a solape y de borde. <b>Posiciones:</b> plana (1G/1F), horizontal (2G/2F), vertical (3G/3F) y sobrecabeza (4G/4F).</div>
+</section>
+
+<section id="equipos">
+<h2>Instrumentos y equipos</h2>
+<p class="lead">Estos son los elementos básicos que se necesitan para soldar de forma correcta y segura.</p>
+
+<div class="clasif-grupo">
+<h3>Equipo de soldadura</h3>
+<div class="clasif-item con-img"><div class="clasif-num">01</div><div><h4>Fuente de poder</h4><p>Máquina (inversor o transformador) que entrega la corriente eléctrica necesaria para generar el arco. Permite regular el amperaje y el voltaje según el material y el espesor.</p></div><img class="clasif-img" src="img/fuente%20de%20poder%20para%20soldar.jpg" alt="Fuente de poder para soldar" loading="lazy"></div>
+<div class="clasif-item con-img"><div class="clasif-num">02</div><div><h4>Portaelectrodo y pinza de tierra</h4><p>El portaelectrodo sujeta el electrodo y la pinza de tierra se conecta a la pieza para cerrar el circuito eléctrico.</p></div><img class="clasif-img" src="img/Portaelectrodo%20y%20pinza%20de%20tierra.jpg" alt="Portaelectrodo y pinza de tierra" loading="lazy"></div>
+<div class="clasif-item con-img"><div class="clasif-num">03</div><div><h4>Antorcha o pistola</h4><p>Conduce el alambre, el gas protector y la corriente en los procesos MIG y TIG.</p></div><img class="clasif-img" src="img/antorcha%20o%20pistola.jpg" alt="Antorcha de soldadura" loading="lazy"></div>
+<div class="clasif-item con-img"><div class="clasif-num">04</div><div><h4>Cilindros y reguladores</h4><p>Almacenan gases como argón, CO₂, oxígeno o acetileno, y los reguladores controlan el caudal y la presión.</p></div><img class="clasif-img" src="img/cilindro.jpg" alt="Cilindros de gas y reguladores" loading="lazy"></div>
+</div>
+
+<div class="clasif-grupo">
+<h3>Protección y acabado</h3>
+<div class="clasif-item con-img"><div class="clasif-num">01</div><div><h4>Careta, guantes y delantal</h4><p>Protección personal frente a la radiación del arco, las chispas, las salpicaduras y el calor.</p></div><img class="clasif-img" src="img/caretas%20y%20guantes.jpg" alt="Equipo de protección para soldar" loading="lazy"></div>
+<div class="clasif-item con-img"><div class="clasif-num">02</div><div><h4>Herramientas de acabado</h4><p>Piqueta para quitar la escoria, cepillo de alambre, amoladora, mesa de trabajo y prensas de sujeción.</p></div><img class="clasif-img" src="img/herramientas%20de%20acabado.jpg" alt="Herramientas de acabado" loading="lazy"></div>
+</div>
+</div>
+</section>
+
+<section id="ventajas">
+<h2>Ventajas y desventajas</h2>
+<p class="lead">La soldadura es muy útil en la industria, pero también tiene riesgos y limitaciones que hay que conocer.</p>
+
+<div class="clasif-grupo vent-ok">
+<h3>Ventajas</h3>
+<div class="clasif-item"><div class="clasif-num">01</div><div><h4>Unión permanente y resistente</h4><p>Bien hecha, la unión iguala o supera la resistencia del metal base.</p></div></div>
+<div class="clasif-item"><div class="clasif-num">02</div><div><h4>Ahorro de peso y material</h4><p>No necesita remaches, tornillos ni piezas extra, lo que reduce el peso y el costo de la estructura.</p></div></div>
+<div class="clasif-item"><div class="clasif-num">03</div><div><h4>Formas complejas y reparaciones</h4><p>Permite construir piezas de formas variadas y reparar piezas rotas o desgastadas.</p></div></div>
+<div class="clasif-item"><div class="clasif-num">04</div><div><h4>Automatización</h4><p>Muchos procesos se pueden automatizar con robots, lo que aumenta la producción y la repetibilidad.</p></div></div>
+<div class="clasif-item"><div class="clasif-num">05</div><div><h4>Uniones herméticas</h4><p>Las uniones quedan selladas, algo clave en tanques, tuberías y recipientes a presión.</p></div></div>
+<div class="clasif-item"><div class="clasif-num">06</div><div><h4>Equipos portátiles</h4><p>Se puede soldar en campo, en obra o en lugares de difícil acceso.</p></div></div>
+</div>
+
+<div class="clasif-grupo vent-no">
+<h3>Desventajas</h3>
+<div class="clasif-item"><div class="clasif-num">01</div><div><h4>Riesgos para la salud</h4><p>Quemaduras, humos tóxicos y radiación del arco si no se usa la protección adecuada.</p></div></div>
+<div class="clasif-item"><div class="clasif-num">02</div><div><h4>Distorsiones y tensiones residuales</h4><p>El calor puede deformar las piezas y dejar tensiones internas al enfriarse.</p></div></div>
+<div class="clasif-item"><div class="clasif-num">03</div><div><h4>Mano de obra calificada</h4><p>La calidad depende de la habilidad de quien suelda y de seguir bien el procedimiento.</p></div></div>
+<div class="clasif-item"><div class="clasif-num">04</div><div><h4>Uniones difíciles de desarmar</h4><p>Al ser permanente, no se puede desmontar sin cortar o dañar las piezas.</p></div></div>
+<div class="clasif-item"><div class="clasif-num">05</div><div><h4>Defectos internos posibles</h4><p>Pueden aparecer porosidad, grietas o falta de fusión, que a veces solo se detectan con ensayos.</p></div></div>
+<div class="clasif-item"><div class="clasif-num">06</div><div><h4>Zona afectada por el calor</h4><p>El metal cercano a la soldadura puede perder resistencia o cambiar sus propiedades.</p></div></div>
+</div>
+</section>
+
+<section id="seguridad">
+<h2>Consideraciones de seguridad</h2>
+<p class="lead">Soldar implica riesgos de quemaduras, descargas eléctricas, humos y radiación. Estas medidas ayudan a prevenirlos.</p>
+
+<div class="clasif-grupo">
+<h3>Protección personal (EPP)</h3>
+<div class="clasif-item con-img"><div class="clasif-num">01</div><div><h4>Careta con filtro adecuado</h4><p>Protege los ojos y la cara de la radiación del arco y de las chispas. El filtro debe tener la sombra correcta para el proceso.</p></div><img class="clasif-img" src="img/caretas.jpg" alt="Careta de soldador" loading="lazy"></div>
+<div class="clasif-item con-img"><div class="clasif-num">02</div><div><h4>Guantes, chaqueta y delantal</h4><p>De cuero o material resistente al calor, para evitar quemaduras por salpicaduras y chispas.</p></div><img class="clasif-img" src="img/Guantes%2C%20chaqueta%20y%20delantal.jpg" alt="Guantes, chaqueta y delantal" loading="lazy"></div>
+<div class="clasif-item con-img"><div class="clasif-num">03</div><div><h4>Botas de seguridad y gafas</h4><p>Las botas protegen de caídas de piezas y del calor. Las gafas se usan debajo de la careta.</p></div><img class="clasif-img" src="img/Botas%20de%20seguridad%20y%20gafas.jpg" alt="Botas de seguridad y gafas" loading="lazy"></div>
+<div class="clasif-item con-img"><div class="clasif-num">04</div><div><h4>Protección auditiva y respiratoria</h4><p>Tapones u orejeras en trabajos ruidosos, y mascarilla o respirador cuando hay humos.</p></div><img class="clasif-img" src="img/Protecci%C3%B3n%20auditiva%20y%20respiratoria.jpg" alt="Protección auditiva y respiratoria" loading="lazy"></div>
+</div>
+
+<div class="clasif-grupo">
+<h3>Zona de trabajo</h3>
+<div class="clasif-item con-img"><div class="clasif-num">01</div><div><h4>Buena ventilación</h4><p>Se debe contar con ventilación o extracción de humos para no respirar gases tóxicos.</p></div><img class="clasif-img" src="img/Buena%20ventilaci%C3%B3n.jpg" alt="Buena ventilación" loading="lazy"></div>
+<div class="clasif-item con-img"><div class="clasif-num">02</div><div><h4>Sin material inflamable</h4><p>Hay que retirar del área líquidos, papeles, telas y cualquier material que pueda incendiarse.</p></div><img class="clasif-img" src="img/Sin%20material%20inflamable.jpg" alt="Zona sin material inflamable" loading="lazy"></div>
+<div class="clasif-item con-img"><div class="clasif-num">03</div><div><h4>Extintor cercano</h4><p>Debe estar a la mano, revisado y ser adecuado para el tipo de fuego posible.</p></div><img class="clasif-img" src="img/Extintor%20cercano.jpg" alt="Extintor cercano" loading="lazy"></div>
+<div class="clasif-item con-img"><div class="clasif-num">04</div><div><h4>Biombos de protección</h4><p>Evitan que el destello del arco lastime a las personas que están cerca.</p></div><img class="clasif-img" src="img/Biombos%20de%20protecci%C3%B3n.jpg" alt="Biombos de protección" loading="lazy"></div>
+</div>
+
+<div class="clasif-grupo">
+<h3>Principales peligros</h3>
+<div class="clasif-item con-img"><div class="clasif-num">01</div><div><h4>Radiación UV/IR</h4><p>Puede causar daño ocular y quemaduras en la piel, incluso por exposiciones cortas.</p></div><img class="clasif-img" src="img/Radiaci%C3%B3n%20UVIR.jpg" alt="Radiación UV/IR" loading="lazy"></div>
+<div class="clasif-item con-img"><div class="clasif-num">02</div><div><h4>Descarga eléctrica</h4><p>Se previene con cables en buen estado, buena conexión a tierra y manos y ropa secas.</p></div><img class="clasif-img" src="img/Descarga%20el%C3%A9ctrica.jpg" alt="Descarga eléctrica" loading="lazy"></div>
+<div class="clasif-item con-img"><div class="clasif-num">03</div><div><h4>Humos y gases tóxicos</h4><p>Al fundir el metal y los recubrimientos se liberan partículas y gases dañinos para los pulmones.</p></div><img class="clasif-img" src="img/Humos%20y%20gases%20t%C3%B3xicos.jpg" alt="Humos y gases tóxicos" loading="lazy"></div>
+<div class="clasif-item con-img"><div class="clasif-num">04</div><div><h4>Incendio, explosión y quemaduras</h4><p>Las chispas y el metal caliente pueden provocar fuego o lesiones si no se controla el entorno.</p></div><img class="clasif-img" src="img/Incendio%2C%20explosi%C3%B3n%20y%20quemaduras.jpg" alt="Incendio, explosión y quemaduras" loading="lazy"></div>
+</div>
+
+<div class="clasif-grupo">
+<h3>Manejo de cilindros de gas</h3>
+<div class="clasif-item con-img"><div class="clasif-num">01</div><div><h4>Posición vertical y asegurados</h4><p>Se sujetan con cadena o soporte para que no se caigan.</p></div><img class="clasif-img" src="img/Posici%C3%B3n%20vertical%20y%20asegurados.jpg" alt="Cilindros en posición vertical" loading="lazy"></div>
+<div class="clasif-item con-img"><div class="clasif-num">02</div><div><h4>Mangueras y reguladores en buen estado</h4><p>Hay que revisarlos antes de usar para detectar fugas o daños.</p></div><img class="clasif-img" src="img/Mangueras%20y%20reguladores%20en%20buen%20estado.jpg" alt="Mangueras y reguladores" loading="lazy"></div>
+<div class="clasif-item con-img"><div class="clasif-num">03</div><div><h4>Sin aceite ni grasa con oxígeno</h4><p>El oxígeno en contacto con aceite o grasa puede provocar combustión violenta.</p></div><img class="clasif-img" src="img/Sin%20aceite%20ni%20grasa%20con%20ox%C3%ADgeno.jpg" alt="Oxígeno sin aceite ni grasa" loading="lazy"></div>
+<div class="clasif-item con-img"><div class="clasif-num">04</div><div><h4>Lejos de fuentes de calor</h4><p>Los cilindros no deben estar cerca de llamas, chispas ni de la luz directa del sol por mucho tiempo.</p></div><img class="clasif-img" src="img/Lejos%20de%20fuentes%20de%20calor.jpg" alt="Cilindros lejos de fuentes de calor" loading="lazy"></div>
+</div>
+
+<div class="alert"><b>Importante:</b> nunca mires el arco sin protección ocular y no sueldes recipientes que hayan contenido combustibles sin la preparación adecuada.</div>
+</section>
+
+<section id="videos">
+<h2>Vídeos recomendados</h2>
+<p class="lead">Vídeos para ver cada proceso en acción, sin salir de la página.</p>
+<div class="video-grid">
+<div class="video-box"><h4>Tipos de soldadura</h4><iframe src="https://www.youtube.com/embed/Lw6QKdKmP6k" title="Tipos de soldadura" allowfullscreen loading="lazy"></iframe></div>
+<div class="video-box"><h4>Procesos de soldadura SMAW</h4><iframe src="https://www.youtube.com/embed/jas53wmLSNU" title="Procesos de soldadura SMAW" allowfullscreen loading="lazy"></iframe></div>
+<div class="video-box"><h4>¿Qué es la soldadura MIG/MAG?</h4><iframe src="https://www.youtube.com/embed/Y6GS8yc23t0" title="¿Qué es la soldadura MIG/MAG?" allowfullscreen loading="lazy"></iframe></div>
+<div class="video-box"><h4>¿Qué es la soldadura TIG?</h4><iframe src="https://www.youtube.com/embed/zzSFK1w1d3o" title="¿Qué es la soldadura TIG?" allowfullscreen loading="lazy"></iframe></div>
+<div class="video-box"><h4>Seguridad en soldadura</h4><iframe src="https://www.youtube.com/embed/CL728LWZdGo" title="Seguridad en soldadura" allowfullscreen loading="lazy"></iframe></div>
+</div>
+</section>
+
+</main>
+<script>
+(function(){
+  var secciones=document.querySelectorAll('main section');
+  var enlaces=document.querySelectorAll('nav a');
+  function mostrar(){
+    var id=location.hash.slice(1);
+    var existe=Array.prototype.some.call(secciones,function(s){return s.id===id});
+    if(!existe){id='intro';}
+    document.body.classList.toggle('en-intro', id==='intro');
+    secciones.forEach(function(s){s.classList.toggle('active',s.id===id)});
+    enlaces.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+id)});
+    window.scrollTo(0,0);
+  }
+  window.addEventListener('hashchange',mostrar);
+  mostrar();
+})();
+</script>
+</body>
+</html>
